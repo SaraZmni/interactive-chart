@@ -28,10 +28,29 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 20px;
+  gap: 40px;
 }
 .bar {
   flex-grow: 1;
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -120%);
+  width: max-content;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  padding: 4px;
+  opacity: 0;
+  z-index: 10;
+  transition: opacity 0.4s ease-in-out;
+}
+.bar:hover .tooltip {
+  opacity: 1;
 }
 
 .y-axis-label {
